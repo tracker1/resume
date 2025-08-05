@@ -683,5 +683,3 @@ Designed and developed an interactive Content Management System (CMS) with a bac
 - Visual Basic .Net (ASP.Net)
 - C# (ASP.Net)
 - Microsoft SQL Server (v7,v2000; T-SQL, Queries, Stored Procedures)
-
------
