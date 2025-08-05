@@ -1,8 +1,12 @@
 # Michael J. Ryan
-Phoenix, AZ, USA | Remote
+
+Phoenix, AZ, USA | Remote<br />
 resume@tracker1.dev | (480) 270-4509 | tracker1.dev
-GitHub: github.com/tracker1 | StackOverflow: stackoverflow.com/users/43906/tracker1 | NPM: npmjs.com/~tracker1
-LinkedIn: linkedin.com/in/tracker1
+
+- LinkedIn: linkedin.com/in/tracker1
+- GitHub: github.com/tracker1
+- StackOverflow: stackoverflow.com/users/43906/tracker1
+- NPM: npmjs.com/~tracker1
 
 ## Professional Summary
 A seasoned full-stack software developer and architect with nearly three decades of experience designing and implementing scalable, high-impact web applications for user bases ranging from dozens to millions. Expertise spans front-end, back-end, and database technologies, with a focus on TypeScript, JavaScript, C#, and modern frameworks like React and Node.js. Renowned for architecting robust solutions, mentoring teams, and contributing to open-source communities, with 18 published NPM packages, over 50 GitHub repositories, and a top 2% StackOverflow ranking (score: 14,000+, 200+ answers). Passionate about delivering innovative, real-world solutions with a strong foundation in both legacy and cutting-edge technologies.
