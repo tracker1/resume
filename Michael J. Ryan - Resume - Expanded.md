@@ -114,7 +114,7 @@ Phoenix, AZ (Remote)
 ### Lead Developer
 #### Yoh (First American Title Insurance Company)
 May 2023 - August 2023
-Phoenix, AZ (Remote)
+Phoenix, AZ (Remote, Contract)
 
 Fluent Title and Platform:
 Led ongoing development, refactoring and enhancements to title and platform team for a multi-agency title process management and workflow application.
@@ -139,7 +139,7 @@ Led ongoing development, refactoring and enhancements to title and platform team
 ### Senior Software Developer
 #### Vaco (HCA/HealthTrust)
 Oct 2022 - Apr 2023
-Phoenix, AZ (Remote)
+Phoenix, AZ (Remote, Contract)
 
 **Marketplace:**
 Lead the UI refinement, refactor and established ongoing best practices for an application for multiple client locations to access office and medical supplies to simplify their procurement process. The role was a combination of hands-on, and mentoring other developers.
@@ -327,7 +327,7 @@ Designed and developed a node based micro-service running under AWS Elastic Bean
 ### Senior Architect
 #### Brooksource (Florida Blue / BCBS)
 Nov 2016 - Dec 2016
-Jacksonville, FL (Onsite)
+Jacksonville, FL (Onsite, Contract)
 
 **Reporting System;**
 Was designing a set of UI projects and related back-ends centered around Node and React. The scope of the project was reduced and my team was cut less than 4 weeks into the project.
@@ -442,7 +442,7 @@ Worked on maintenance and enhancement of existing ASP.Net MVC application as wel
 ### Senior Software Developer
 #### Volt (US Airways)
 May 2013 - Aug 2013
-Tempe, AZ (Onsite)
+Tempe, AZ (Onsite, Contract)
 
 **Internal API Services:**
 Refactored C# based API interfaces using WCF creating a Unity Framework interface that allowed for more transparent service creation, as well as client usage.
@@ -490,7 +490,7 @@ Created a mail spool processing system that improved delivery rates, while also 
 ### Director of Software Development
 #### Inxsol
 Feb 2011 - Nov 2011
-Onsite; Phoenix, AZ
+Phoenix, AZ (Onsite)
 
 **Command Plan:**
 Worked on creating a web based version of the Command Plan incident command training software. The software utilizes a flash based client written in Flex (Flash Builder 4) with Actionscript. There are also authoring components created in Flex as well. The front end is using ASP.Net WebForms, with portions using an MVC 3 interface. Portions of the front end are written with HTML5 tags and CSS3 style decorations. The backend has several tiers including web based service interfaces, a communication router (message queue) using WCF in a Windows Service as well as the simulation engine itself using a WCF interface in a Windows Service. This allows for future scalability with different teirs being able to grow into multiple physical systems as the need arises. There is also a speach processing service which utilizes FLOSS Java components.
@@ -510,7 +510,7 @@ Worked on creating a web based version of the Command Plan incident command trai
 ### Senior UX Developer
 #### COMSYS / Experis (US Airways)
 Jul 2010 - Feb 2011
-Tempe, AZ (Onsite)
+Tempe, AZ (Onsite, Contract)
 
 **Web Check-In:**
 Worked on creating a modern web front end for the web check-in portion of the website. Utilized HTML 5 based tagging, as well as enhanced features utilizing CSS3 (with CSS3PIE for Ie6-8 Support). The server-side code utilized C# with ASP.Net MVC (version 2) along with custom integration utilizing jQuery, jQuery-Validation extensions, and jQuery Metadata extensions. Utilized modern techniques in CSS/JavaScript minify and merge. Created complex interactions utilizing events, custom UI controls, and implemented features for simplified communications via Ajax/JSON. The back-end communications utilized several service broker layers written in C#. Unit testing was done with VSUnit and Moq for the main mocking framework. The overall changes created a UI that was consistent with the existing site, but reduced the overall payload by well over half, and improved page load time by a factor of 10.
@@ -531,7 +531,7 @@ Reduced various scripted entries, unified the work done for date entries, and mo
 ### Senior Developer
 #### COMSYS / Experis (Wells Fargo)
 Jun 2009 - Jun 2010
-Chandler, AZ (Onsite)
+Chandler, AZ (Onsite, Contrct)
 
 **ART Workflow WCF Service:**
 Worked on an interactive WCF service endpoints for use with integrating the main Access Request Tool (ART) applications and related applications.
@@ -581,7 +581,7 @@ Worked on a custom web based POS/ERM system that utilized the latest technology 
 ### Senior Software Engineer
 #### MDI (Apollo Group / University of Phoenix)
 Jun 2008 - Jan 2009
-Phoenix, AZ (Onsite)
+Phoenix, AZ (Onsite, Contract)
 
 **Apollo.Common Library:**
 Created a library to support a common infrastructure for shared and diverse application configuration needs, as well as an enhanced memcaced client, and had begun integration of a common logging system to utilize the common configuration portion. 
