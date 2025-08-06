@@ -19,7 +19,7 @@ A seasoned full-stack software developer and architect with nearly three decades
 - Cloud & DevOps: AWS (Lambda, S3, Elastic Beanstalk), Azure (DevOps, Storage, API Gateway), Kubernetes, Docker, Terraform, CI/CD (GitHub, Azure DevOps)
 - Tools & Platforms: GitHub (50+ repositories, 150+ stars), NPM (18 packages, e.g., node-uuid4, node-scrypt-js), Cloudflare Pages/Workers, Webpack, Babel, NSwag
 - Specializations: Solution architecture, full-stack development, API design, authentication systems, UI/UX, open-source contributions
-- Community Impact: Top 2% on StackOverflow (14,000+ score, 200+ answers), active GitHub contributor with projects in JavaScript, TypeScript, Node.js, Go, and Rust
+- Community Impact: Top 2% on StackOverflow (19,000+ score, 450+ answers), active GitHub contributor with projects in JavaScript, TypeScript, Node.js, Go, and Rust
 
 ## Professional Experience
 
