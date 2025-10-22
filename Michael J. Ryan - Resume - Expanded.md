@@ -264,7 +264,7 @@ Designed an architecture for a new software solution to manage the ballot on dem
 
 ### Senior Software Developer
 #### Berkadia
-Oct 2014 - May 2018
+Oct 2017 - May 2018
 Phoenix, AZ (Onsite)
 
 **DesignView:**
