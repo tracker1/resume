@@ -39,6 +39,8 @@ Acting as Principal Developer/Architect working on a new Election Management Ser
 - Microsoft SQL Server
 - Dapper
 - React
+- Mantine UI
+- Zustand
 
 -----
 
