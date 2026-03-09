@@ -29,7 +29,7 @@ Apr 2025 - Current
 Phoenix, AZ (Remote, Contract)
 
 **Election Management Software:**
-Working with the City Clerk's office on a new Election Management Services web based application to manage city elections. 
+Acting as Principal Developer/Architect working on a new Election Management Services platform for the City of Phoenix Clerk's office.  A new web based system to manage city elections. 
 
 **Tools:**
 - C#
