@@ -360,6 +360,11 @@ Michael directly and override anything a generator might infer from the source f
 - Derived counts as of September 2026, for documents that want a number rather than a
   year: JavaScript 28, SQL 27, C# 25, Node.js 15, React 13, TypeScript 13, Rust 3.
   Recompute these from the start years above rather than copying them forward.
+- On the C# start year, since .NET 1.0 did not ship until early 2002: 2001 covers the
+  late ASP+ betas, before the ASP.NET rename. He went deep on .NET in early 2002 after
+  reading "C# The Complete Reference," working from the command-line compiler and a
+  plain text editor; Visual Studio .NET did not arrive until roughly a year after that.
+  That is the answer if anyone questions 25 years of C# against a 2002 release date.
 
 ### Presentation preferences
 
