@@ -14,7 +14,7 @@ A seasoned full-stack software developer and architect with close to 30 years of
 
 ## Core Competencies:
 
-- Languages: JavaScript (28 years, since 1997), SQL (27 years, since 1999), C# (25 years, since 2001), TypeScript (13 years, since 2013), Rust (3 years, since 2023), Go, ActionScript, ExtendScript
+- Languages: JavaScript (28 years, since 1997), SQL (27 years, since 1999), C# (25 years, since 2001), TypeScript (13 years, since 2013), Rust (personal projects, since 2021), Go, ActionScript, ExtendScript
 - Front-End: React (13 years, since 2013), Redux, Material UI (MUI), Angular, HTMX, jQuery, Bootstrap, HTML5, CSS3
 - Back-End: Node.js (15 years, since 2011; in production since 2012), Express, Koa, ASP.NET (MVC, WebAPI, WebForms), .NET Core, WCF
 - Databases: Microsoft SQL Server, PostgreSQL, MySQL, SQLite, AWS DynamoDB, Cassandra, Redis, Azure Cognitive Search, Elasticsearch

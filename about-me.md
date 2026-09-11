@@ -188,11 +188,12 @@ bundling, Docker image composition) are design decisions, not afterthoughts.
 **Languages and runtimes:** C#/.NET (since 2001; primary in the current role and most
 recent contracts), TypeScript/JavaScript (longest tenure; JavaScript since 1997,
 TypeScript since 2013, professional use across most roles), T-SQL (since 1999), Rust
-(since 2023; primary for personal and product work). Deno is the preferred runtime
-for scripts and orchestration so repository modules can be referenced without a separate
-install step. This is now professional practice rather than only personal: on the
-current City of Phoenix election management contract (Apr 2025 to present) he wrote the
-bulk of the build and automation tooling in TypeScript under Deno.
+(first worked with it in 2021, in sustained use since 2023; personal and product work,
+not yet professional). Deno is the preferred runtime for scripts and orchestration so
+repository modules can be referenced without a separate install step. This is now
+professional practice rather than only personal: on the current City of Phoenix election
+management contract (Apr 2025 to present) he wrote the bulk of the build and automation
+tooling in TypeScript under Deno.
 
 **Backend:** Rust (Axum), C# (ADO.NET, Dapper, FastEndpoints), Node.js since 0.6 in 2011
 on Linux, in production from 0.8 in 2012 building the ClassicCars.com search service
@@ -314,8 +315,9 @@ applies to everything else. A model is a tool that has to earn its place too.
   tooling. The filter is deliberate. He tracks a wide surface shallowly and digs deep
   only into what he actually needs, which is the YAGNI discipline from section 2 applied
   to his own attention rather than to a codebase. Rust is the standing exception to
-  need-driven learning: he has been investing in it by preference, aware that job market
-  support for it is thinner than for his other languages. State this as a rate; do not
+  need-driven learning: he completed Rust Essential Training in 2021 and has kept at it
+  since, steadily rather than continuously, by preference rather than market demand. He
+  would like to use it professionally and has not had the chance. State this as a rate; do not
   multiply it out into a headline total.
 - **Experience in lieu of degree.** No college degree; positions close to 30 years of
   professional delivery as the equivalent, backed by the self-directed learning habit
@@ -356,9 +358,10 @@ Michael directly and override anything a generator might infer from the source f
 - Per-language tenure, as start years rather than running totals so they stay correct:
   JavaScript since late 1997, SQL since 1999, C# since 2001, Node.js since 2011 (the 0.6
   release, on Linux; production use from 0.8 in 2012), React since 2013, TypeScript since
-  2013, Rust since 2023.
+  2013, Rust first touched in 2021 and in sustained use since 2023.
 - Derived counts as of September 2026, for documents that want a number rather than a
-  year: JavaScript 28, SQL 27, C# 25, Node.js 15, React 13, TypeScript 13, Rust 3.
+  year: JavaScript 28, SQL 27, C# 25, Node.js 15, React 13, TypeScript 13, Rust 3
+  sustained (5 since first exposure in 2021).
   Recompute these from the start years above rather than copying them forward.
 - On the C# start year, since .NET 1.0 did not ship until early 2002: 2001 covers the
   late ASP+ betas, before the ASP.NET rename. He went deep on .NET in early 2002 after
