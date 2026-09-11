@@ -368,6 +368,17 @@ Michael directly and override anything a generator might infer from the source f
   reading "C# The Complete Reference," working from the command-line compiler and a
   plain text editor; Visual Studio .NET did not arrive until roughly a year after that.
   That is the answer if anyone questions 25 years of C# against a 2002 release date.
+- On .NET version naming, which is confusing through no fault of his: he worked with the
+  original .NET Framework from the betas, through the Framework releases, to the final
+  Framework version. He also worked with .NET Core 1 through 3, after which Microsoft
+  dropped the "Core" name and continued the same line as .NET 5. So a posting asking for
+  ".NET Core," or for any .NET above 4, is asking about ground he has covered. The naming
+  changed; the lineage did not. Do not let a generated document imply his .NET experience
+  stops at Framework 4.x, and do not treat "Core" and "5+" as separate skills.
+- .NET and C# version numbers do not line up, which is a common source of confusion in
+  his own older notes: .NET Core 3 ships C# 8, .NET 5 ships C# 9, .NET 6 ships C# 10,
+  .NET 7 ships C# 11. The expanded resume now records the two separately per role. When
+  he refers to a version informally he usually means the .NET version, not the C# one.
 
 ### Presentation preferences
 
@@ -379,6 +390,16 @@ Michael directly and override anything a generator might infer from the source f
   vocabulary (leverage, robust, seamless, passionate, spearheaded, delve, elevate,
   "not just X but Y," and the rest). Vary sentence and bullet length; uniform rhythm is
   its own tell.
+- Omit technology version numbers. The expanded resume records them (Angular 4, .NET
+  Core 3, Node 8 and so on) as reference detail; generated documents name the
+  technology only. Exception: keep a version where it is the point, such as the
+  .NET Core 2 to 3 migration at Runbeck.
+- MUI is the React component library that implements Google's Material Design. It was
+  previously called Material UI, so older material says Material UI, Material-UI, or
+  "MUI (Material Design)" interchangeably. They are one library, not several skills.
+  Write it as MUI, adding "(Material UI)" only where the older name helps a reader
+  connect it to dated work. Material Design is Google's design system, which is a
+  separate thing from the library that implements it; do not list them as two skills.
 - Date ranges as "Apr 2025 - Present" with a plain hyphen.
 - Use names rather than pronouns where possible; they/them if a pronoun is needed.
 
