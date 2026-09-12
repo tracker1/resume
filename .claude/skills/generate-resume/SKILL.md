@@ -71,12 +71,32 @@ relies on those breaks.
 1. Read `about-me.md` (Section 8 especially) and the expanded resume.
 2. If a job was named, identify what it actually screens for and which of Michael's
    evidence maps to it. Say so briefly before writing.
-3. Write both markdown files into `dist/` using today's date: `date +%Y%m%d`.
-4. Build: `./build-docs.sh dist/mryan-resume-YYYYMMDD.md dist/mryan-cover-YYYYMMDD.md`
-5. Verify: page counts via `pdfinfo`, `0` non-ASCII in both markdown files, and render at
+3. **Clear `dist/` first.** `dist/` holds only the current pair of documents, never a
+   history of them. Remove its contents before generating: `rm -f dist/*`. Previous
+   versions live in git, so nothing is lost. Create the directory if it does not exist.
+4. Write both markdown files into `dist/` using today's date from `date +%Y%m%d`:
+   - `dist/mryan-resume-YYYYMMDD.md`
+   - `dist/mryan-cover-YYYYMMDD.md`
+5. Build: `./build-docs.sh dist/mryan-resume-YYYYMMDD.md dist/mryan-cover-YYYYMMDD.md`
+6. Verify: page counts via `pdfinfo`, `0` non-ASCII in both markdown files, and render at
    least one page to PNG with `pdftoppm` and actually look at it. Page count alone does not
    catch broken paragraph flow.
-6. Report page counts, word counts, and any claim you could not source, so Michael can
+7. **Update `README.md`.** Replace everything between the `<!-- CURRENT:START -->` and
+   `<!-- CURRENT:END -->` markers with links to the files just generated, keeping the
+   existing shape:
+
+   ```markdown
+   **Resume** - [PDF](dist/mryan-resume-YYYYMMDD.pdf) | [DOCX](dist/mryan-resume-YYYYMMDD.docx) | [Markdown](dist/mryan-resume-YYYYMMDD.md)
+
+   **Cover letter** - [PDF](dist/mryan-cover-YYYYMMDD.pdf) | [DOCX](dist/mryan-cover-YYYYMMDD.docx) | [Markdown](dist/mryan-cover-YYYYMMDD.md)
+
+   *Generated YYYY-MM-DD.*
+   ```
+
+   Leave the markers themselves in place; they are how the next run finds the block. Do not
+   edit any other part of the README. Afterwards, confirm no link points at a file that is
+   no longer in `dist/`.
+8. Report page counts, word counts, and any claim you could not source, so Michael can
    confirm or cut it.
 
 ## Tailoring, when a job is given
