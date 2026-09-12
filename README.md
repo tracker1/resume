@@ -58,3 +58,46 @@ sudo apt install -y pandoc texlive-xetex texlive-latex-recommended texlive-fonts
 ```
 
 Pandoc handles DOCX natively; XeLaTeX renders the PDF.
+
+## Fresh checkout
+
+The DOCX and PDF files are stored with [Git LFS](https://git-lfs.com/). Install it before
+cloning, or the binaries arrive as small text pointer files rather than real documents.
+
+```bash
+sudo apt install -y git-lfs    # or: brew install git-lfs
+git lfs install                # once per machine, sets up the filters
+git clone git@github.com:tracker1/resume.git
+```
+
+If the repository is already cloned and LFS was installed afterwards:
+
+```bash
+git lfs install
+git lfs pull                   # fetch the binary contents from the remote
+```
+
+### When a PDF or DOCX will not open
+
+Check whether the file is a pointer rather than a document:
+
+```bash
+head -c 40 dist/*.pdf
+```
+
+A real PDF starts with `%PDF`, and a DOCX starts with `PK`. If instead you see
+`version https://git-lfs.github.com/spec/v1`, the LFS smudge filter did not run.
+
+```bash
+git check-attr filter -- dist/some-file.pdf   # expect: filter: lfs
+```
+
+If that reports `filter: unspecified`, something in `.gitattributes` is overriding the LFS
+rules. Attributes are last-match-wins, so a broad pattern such as `* !filter` placed after
+the LFS lines silently disables them for every file. Remove the offending line, then
+materialize the real content:
+
+```bash
+git lfs checkout               # from objects already in .git/lfs/objects
+git lfs pull                   # if the objects are not local yet
+```
