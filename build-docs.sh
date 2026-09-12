@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Render markdown resumes/letters to PDF and DOCX.
-#   ./build-docs.sh                 # builds every .md in temp/
+#   ./build-docs.sh                 # builds every .md in dist/, temp/ and temp/*/
 #   ./build-docs.sh path/to/file.md # builds just that file
 # Output lands next to the source .md.
 set -euo pipefail
@@ -39,5 +39,8 @@ if [[ $# -gt 0 ]]; then
   for f in "$@"; do build "$f"; done
 else
   shopt -s nullglob
-  for f in "$HERE"/temp/*.md; do build "$f"; done
+  for f in "$HERE"/dist/*.md "$HERE"/temp/*.md "$HERE"/temp/*/*.md; do
+    [[ "$(basename "$f")" == "job.txt" ]] && continue
+    build "$f"
+  done
 fi
