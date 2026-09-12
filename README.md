@@ -3,11 +3,11 @@
 ## Current
 
 <!-- CURRENT:START -->
-**Resume** - [PDF](dist/mjryan-resume-20260911.pdf) | [DOCX](dist/mjryan-resume-20260911.docx) | [Markdown](dist/mjryan-resume-20260911.md)
+**Resume** - [PDF](https://github.com/tracker1/resume/raw/master/dist/mjryan-resume-20260911.pdf) | [DOCX](https://github.com/tracker1/resume/raw/master/dist/mjryan-resume-20260911.docx) | [Markdown](dist/mjryan-resume-20260911.md)
 
-**Cover letter** - [PDF](dist/mryan-cover-20260911.pdf) | [DOCX](dist/mryan-cover-20260911.docx) | [Markdown](dist/mryan-cover-20260911.md)
+**Cover letter** - [PDF](https://github.com/tracker1/resume/raw/master/dist/mryan-cover-20260911.pdf) | [DOCX](https://github.com/tracker1/resume/raw/master/dist/mryan-cover-20260911.docx) | [Markdown](dist/mryan-cover-20260911.md)
 
-*Generated 2026-09-11.*
+*Generated 2026-09-11. PDF and DOCX links download directly; Markdown renders on GitHub.*
 <!-- CURRENT:END -->
 
 ---

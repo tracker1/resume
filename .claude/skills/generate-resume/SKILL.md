@@ -86,12 +86,22 @@ relies on those breaks.
    existing shape:
 
    ```markdown
-   **Resume** - [PDF](dist/mryan-resume-YYYYMMDD.pdf) | [DOCX](dist/mryan-resume-YYYYMMDD.docx) | [Markdown](dist/mryan-resume-YYYYMMDD.md)
+   **Resume** - [PDF](https://github.com/tracker1/resume/raw/master/dist/mryan-resume-YYYYMMDD.pdf) | [DOCX](https://github.com/tracker1/resume/raw/master/dist/mryan-resume-YYYYMMDD.docx) | [Markdown](dist/mryan-resume-YYYYMMDD.md)
 
-   **Cover letter** - [PDF](dist/mryan-cover-YYYYMMDD.pdf) | [DOCX](dist/mryan-cover-YYYYMMDD.docx) | [Markdown](dist/mryan-cover-YYYYMMDD.md)
+   **Cover letter** - [PDF](https://github.com/tracker1/resume/raw/master/dist/mryan-cover-YYYYMMDD.pdf) | [DOCX](https://github.com/tracker1/resume/raw/master/dist/mryan-cover-YYYYMMDD.docx) | [Markdown](dist/mryan-cover-YYYYMMDD.md)
 
-   *Generated YYYY-MM-DD.*
+   *Generated YYYY-MM-DD. PDF and DOCX links download directly; Markdown renders on GitHub.*
    ```
+
+   **Use absolute `raw` URLs for the PDF and DOCX**, in the form
+   `https://github.com/tracker1/resume/raw/master/dist/<file>`. A relative link to a binary
+   only opens the GitHub file-view page, and for LFS-backed files `raw.githubusercontent.com`
+   serves the pointer text rather than the document. The `github.com/.../raw/...` form
+   redirects to GitHub's media host and returns the real file. Markdown keeps a relative
+   link so GitHub renders it.
+
+   These URLs describe where the files will live once pushed to `master`, so they are
+   correct in the committed README even before the push.
 
    Leave the markers themselves in place; they are how the next run finds the block. Do not
    edit any other part of the README. Afterwards, confirm no link points at a file that is
