@@ -21,9 +21,11 @@ comfortable designing a binary file format, a database schema, a WebSocket proto
 React component architecture, or a Docker distribution strategy, and treats all of these
 as the same discipline: deciding what the boundaries are and keeping them clean.
 
-He runs his own LLC (Roughneck Development) commercializing software products, which
-means his design instincts have been tested against distribution, licensing, support, and
-long-term maintenance costs, not only "does it ship."
+Roughneck Development is the name he has done independent work under (see the expanded
+resume, 2005-2008). Current product, edition, licensing, and distribution ideas under that
+name come from planning work. He has not independently sold commercial software, so treat
+those plans as evidence of how he thinks about distribution and maintenance cost, not as
+a commercial track record.
 
 ---
 
@@ -84,10 +86,6 @@ Michael consistently defines the _contract_ before the implementation:
 
 - A browser terminal's contract is "a pure CP437/ANSI byte stream"; all Telnet IAC
   negotiation is pushed into a bridge so the client stays simple.
-- A door-authoring kit uses a sideband JSON protocol so game logic and I/O transport are
-  cleanly separated and multiple host platforms can be supported via plugins.
-- Database adapters share a `@tsdriver/core` package so MSSQL, ODBC, and SQLite drivers
-  present the same API surface.
 - UI components are split into four files (container, pure UI, mock, types) so rendering
   is testable without Redux or WebSocket wiring.
 
@@ -106,8 +104,6 @@ He designs for the environment as it actually is, not as documentation claims:
 - Grace periods, reconnect windows, and stale/delist policies are specified with concrete
   time values and escalation steps (probe -> warn sysop -> soft-delist -> retain legacy
   URL).
-- Docker images that ship with SMB/CIFS dependencies enabled, because a user hitting
-  a missing dependency at runtime is a support ticket, not a feature.
 - Session invalidation is designed end-to-end (publish -> forced close -> rejection on
   reconnect), rather than a bare "delete the token."
 
@@ -154,10 +150,6 @@ implementation first, ask if uncertain.
 
 ### Scopes aggressively
 
-- A multi-year CHM viewer idea was narrowed to a single first deliverable: a CLI that
-  converts `.chm` to a self-contained HTML file.
-- A DOS door hosting service is explicitly "DOS doors only"; Linux and other hosts are
-  named as separate future sibling services, not scope creep.
 - A terminal client's v1 is "general ANSI over telnet, SSH, and WebSockets"; graphics
   protocol support and UTF-8 are explicitly deferred.
 
@@ -165,15 +157,9 @@ He names the future work so it doesn't get accidentally built now.
 
 ### Thinks in editions, licensing, and distribution
 
-Products are structured as editions (Community, Desktop, Server, Pro, Enterprise) with
-deliberate licensing choices. His default for open work is ISC: permissive, short, and
-unambiguous. He will use MIT or BSD instead where an ecosystem's convention makes one of
-those the expected choice, since matching what a community already reaches for lowers
-friction for the people adopting it.
-
 He does not favor copyleft. GPL and LGPL appear in his projects for two reasons only:
 he is adapting something that is already GPL and has no choice, or the copyleft is
-itself the strategic point. The BUSL 1.1 commercial licensing with a time-based
+itself the strategic point. The planned BUSL 1.1 licensing with a time-based
 conversion is the second case, and the conversion target is GPL-compatible because BUSL
 1.1 requires that, not because he prefers it. Read any GPL in his work as a constraint
 he accepted rather than a position he holds.
@@ -185,41 +171,46 @@ bundling, Docker image composition) are design decisions, not afterthoughts.
 
 ## 4. Technical Range
 
-**Languages and runtimes:** C#/.NET (since 2001; primary in the current role and most
+**Languages and runtimes:** C#/.NET (since 2001; primary in the most
 recent contracts), TypeScript/JavaScript (longest tenure; JavaScript since 1997,
 TypeScript since 2013, professional use across most roles), T-SQL (since 1999), Rust
-(first worked with it in 2021, in sustained use since 2023; personal and product work,
+(first worked with it in 2021, in sustained use since 2023; personal projects,
 not yet professional). Deno is the preferred runtime for scripts and orchestration so
 repository modules can be referenced without a separate install step. This is now
-professional practice rather than only personal: on the current City of Phoenix election
-management contract (Apr 2025 to present) he wrote the bulk of the build and automation
+professional practice rather than only personal: on the City of Phoenix election
+management contract (Apr 2025 - Sep 2026) he wrote the bulk of the build and automation
 tooling in TypeScript under Deno.
 
-**Backend:** Rust (Axum), C# (ADO.NET, Dapper, FastEndpoints), Node.js since 0.6 in 2011
+**Backend:** Rust (Axum), C# (ASP.NET, MVC, ADO.NET, Dapper, FastEndpoints), Node.js since 0.6 in 2011
 on Linux, in production from 0.8 in 2012 building the ClassicCars.com search service
 (Express, Koa, Hono, Apollo GraphQL), REST and WebSocket APIs, MQTT internal messaging,
-JWT/role normalization pipelines, multi-protocol networking (FTP/SFTP/SMB/S3/Azure Blob;
+JWT in most professional work since GoDaddy (2013), including an early JWT library he
+wrote for Node.js before one was available on npm, JWT/role normalization pipelines,
+multi-protocol networking (FTP/SFTP/SMB/S3/Azure Blob;
 BinkP/QWK/NNTP; Telnet/SSH/rlogin). Professional messaging work with Kafka, RabbitMQ,
 and Azure Storage Queues.
 
 **Frontend:** React since 2013, shortly after its first public release, currently React
 19 with MUI and hand-written Redux (deliberately "manual over the toolkit") on personal
-work; React with Mantine UI and Zustand on the current professional contract; MobX at
+work; React with Mantine UI and Zustand on the City of Phoenix contract; MobX at
 ServiceTitan. SharedWorker-multiplexed WebSockets with state hydration from
 server-pushed deltas, Storybook with theme decorators for component development.
 
-**Data:** SQLite/libsql/Turso, FTS5 full-text search, MSSQL, PostgreSQL, ODBC. Currently
+**Data:** SQLite/libsql/Turso, FTS5 full-text search, MSSQL, PostgreSQL, ODBC. Professionally
+has worked on several systems carrying transactional state across millions of records,
+though not payments-specific; the payments exposure is the Bank of America merchant
+services (payments back end) architecture work at Blankfactor. Currently
 building a cross-system ODBC database adapter for Node, Deno, and Bun in Rust over FFI.
 Comfortable designing schemas with per-domain or per-area database partitioning, content
 hashing (CRC-32, SHA-256), and R2/S3-backed sync with conditional writes.
 
 **Infrastructure:** Docker, Kubernetes/Helm, Terraform, Cloudflare Workers and R2,
-OVH-hosted Rust services, Stripe licensing infrastructure, GitHub Actions/`gh` CLI
+OVH-hosted Rust services, Stripe licensing (planned, not in commercial use), GitHub Actions/`gh` CLI
 automation, git worktrees for parallel branch work.
 
-**Systems and low-level:** Binary format design, LZ compression, CPU emulation (Fast486
-port to Rust), HLE DOS layers, FOSSIL/serial emulation, WASM rendering pipelines with
-GPU-scaled output (xBR/hqx), Tauri v2 desktop apps, Wine/DOSBox-X packaging, binary
+**Systems and low-level:** Binary format design, LZ compression, C,
+WASM rendering pipelines with GPU-scaled output (xBR/hqx),
+Tauri v2 desktop apps, Wine/DOSBox-X packaging, binary
 patching of legacy executables.
 
 **Domain depth:** Deep BBS/FTN/QWK expertise (Synchronet, JAM/Squish message bases,
@@ -305,7 +296,7 @@ applies to everything else. A model is a tool that has to earn its place too.
   binary-patching work gets abandoned applications running again rather than treating
   them as a study exercise.
 - **Community-minded where it costs nothing.** Publishes specs, crates, and restored
-  tools openly; keeps commercial work commercial.
+  tools openly.
 - **Modernization as a specialty.** Much of his work, personal and professional, is
   taking systems built decades ago and making them run correctly on current platforms
   without losing what made them work. This maps directly onto legacy-migration roles.
@@ -340,7 +331,7 @@ Use these as the narrative spine, selecting the ones that match the role:
    the support tickets that never get filed because the edge case was handled.
 6. **Shared foundations.** Has built the pieces other engineers build on: the Runbeck
    auth/RBAC service, `Apollo.Common`, the ServiceTitan customer-facing API surface,
-   NSwag-generated clients at HCA, build tooling at Berkadia and on the current contract.
+   NSwag-generated clients at HCA, build tooling at Berkadia and on the City of Phoenix contract.
    Pair this with the abstraction-cost conviction from section 2 for platform, developer
    experience, and internal-library roles.
 
@@ -403,6 +394,27 @@ Michael directly and override anything a generator might infer from the source f
 - Date ranges as "Apr 2025 - Present" with a plain hyphen.
 - Use names rather than pronouns where possible; they/them if a pronoun is needed.
 
+### Voice
+
+Notes from Michael's own edits to generated drafts (a September 2026 LinkedIn post
+announcing his job search). Apply them to anything written in his first person: posts,
+cover letters, messages.
+
+- **Plain and direct.** Short declarative sentences, everyday phrasing ("wrapped up,"
+  "I do my best work on," "simple, boring systems"). No pitch language.
+- **Warm, brief openers for social posts.** He added a casual greeting ("Hi everyone")
+  ahead of the substance. Keep it to a few words and get to the point. In generated text
+  follow it with a plain hyphen or comma, since the ASCII rule still applies.
+- **Precise about where experience comes from.** He changed "AI tools are part of how I
+  work" to say they are part of how he works *on his personal projects*. Do not let a
+  general statement imply professional use, scope, or ownership he has not had; name the
+  context instead.
+- **States what he wants from an employer.** He added "open to workplaces that allow
+  that" after the AI line. Where a preference or condition matters to him, say it
+  plainly rather than leaving the reader to infer it.
+- **Honest over hype.** Measured claims, the real constraint named ("review as the real
+  limit, not hype"). Nothing inflated to sound more impressive.
+
 ### Do not claim
 
 Claims he could not or did not confirm. Do not let them into generated documents.
@@ -415,6 +427,10 @@ Claims he could not or did not confirm. Do not let them into generated documents
   integrators. Do not claim internal product teams consumed it.
 - **First American Title micro-UI library.** He built on top of the internal micro-UI
   platform library. Do not claim he built it or contributed to it.
+- **Commercial software sales.** He has not independently sold commercial software.
+  Roughneck Development products, editions, licensing, and Stripe infrastructure come
+  from planning work. Do not describe them as products that are sold, shipped to
+  customers, or maintained for a customer base.
 - **Anything not in the expanded resume, the work history, or this document.** If a
   generator wants a detail that is not in one of those, it is a question for Michael,
   not a sentence in the draft.

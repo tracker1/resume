@@ -1,7 +1,7 @@
 # Michael J. Ryan
 
 Phoenix, AZ, USA | Remote<br />
-resume@tracker1.dev | (480) 270-4509 | tracker1.dev
+tracker1@gmail.com | (480) 270-4509
 
 - LinkedIn: https://www.linkedin.com/in/tracker1
 - GitHub: https://github.com/tracker1
@@ -20,7 +20,7 @@ Full-stack software developer and architect with close to 30 years of experience
 - Databases: Microsoft SQL Server, PostgreSQL, MySQL, SQLite, AWS DynamoDB, Cassandra, Redis, Azure Cognitive Search, Elasticsearch
 - Cloud & DevOps: AWS (Lambda, S3, Elastic Beanstalk), Azure (DevOps, Storage, API Gateway), Kubernetes, Docker, Terraform, CI/CD (GitHub, Azure DevOps)
 - Tools & Platforms: GitHub, NPM, Cloudflare Pages/Workers, Webpack, Babel, NSwag
-- Specializations: Solution architecture, full-stack development, API design, authentication systems, UI/UX, open-source contributions
+- Specializations: Solution architecture, full-stack development, API design, authentication systems (JWT in most professional work since GoDaddy in 2013; wrote an early JWT library for Node.js before one was available on npm), UI/UX, open-source contributions
 - Community Impact: Long-standing top-ranked StackOverflow contributor, active GitHub contributor with projects in JavaScript, TypeScript, Node.js, Go, and Rust, and maintainer of several published NPM packages
 
 ## Professional Experience
@@ -125,7 +125,7 @@ Apr 2024 - Oct 2024
 Phoenix, AZ (Remote)
 
 **Merchant Business Software Solutions:**
-Contributed to a merchant services application uplift as part of the solution architecture team.
+Contributed to a merchant services (payments back end) application uplift as part of the solution architecture team.
 
 - Created Strategic Architectural Diagrams (SAD) using Visio and PowerPoint to guide development planning.
 - Provided technical input during product planning and PI initiatives, aimed at development efficiency and architectural clarity.

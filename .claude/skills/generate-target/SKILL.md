@@ -27,6 +27,14 @@ here too and are not repeated below. In particular: ASCII only, no version numbe
 volatile metrics, the do-not-claim guardrails, and every paragraph and bullet on a single
 source line.
 
+### Scope of sources
+
+For each application, the only inputs are that folder's job posting, `about-me.md`, and
+`Michael J. Ryan - Resume - Expanded.md`. Do not read or reuse anything in `dist/` or in
+any other `temp/` folder, whether as a base, a template, or a phrasing reference. Each
+document is written fresh from the sources, so an error or unconfirmed claim in an earlier
+generated document cannot carry forward.
+
 ## Finding work to do
 
 1. List candidates: every directory under `temp/` that contains a `job.txt`.
@@ -70,6 +78,13 @@ Steps:
 - The cover letter opening must be specific to this company and this posting. A paragraph
   that would work for any employer is worse than no paragraph.
 - The letter carries reasoning, the resume carries record. Do not restate one in the other.
+- **Keep the cover letter terse.** Roughly 200 to 250 words, well under a page. Michael
+  prefers succinct letters that do not belabor every small point. The shape that works:
+  a two- or three-sentence opening tied to something specific in the posting; one
+  paragraph of the strongest one or two pieces of evidence with the lesson they share; a
+  single sentence naming the main gap, if there is one; a one-line close. Pick the few
+  points that matter most for this role and drop the rest, rather than giving every
+  requirement its own paragraph.
 - Where the posting names something Michael has no evidence for, leave it out. Do not
   reach, and do not soften a guardrail because the posting would reward crossing it.
 
