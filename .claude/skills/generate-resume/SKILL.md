@@ -1,16 +1,20 @@
 ---
 name: generate-resume
-description: Generate a tailored or generic resume and cover letter into dist/, then build docx and pdf. Use when the user asks for a new resume, a cover letter, or documents for a specific job posting. Pass a job description or company name as the argument to tailor; with no argument, produces generic Staff/Principal-level documents.
+description: Generate a tailored or generic resume into dist/, then build docx and pdf. Use when the user asks for a new resume or an updated current resume. Pass a job description or company name as the argument to tailor; with no argument, produces a generic Staff/Principal-level resume. Cover letters are not produced here; use generate-target for a job-specific resume and cover letter pair.
 ---
 
-# Resume and cover letter generation
+# Resume generation
 
-Generate `dist/mryan-resume-YYYYMMDD.md` and `dist/mryan-cover-YYYYMMDD.md`, then render
-both to `.docx` and `.pdf`.
+Generate `dist/mryan-resume-YYYYMMDD.md`, then render it to `.docx` and `.pdf`.
+
+**This skill produces a resume only.** `dist/` carries the current resume and nothing else.
+Cover letters are written per application by the `generate-target` skill, into that
+application's own folder under `temp/`. If Michael asks for a cover letter here, point him
+at `generate-target` rather than writing one into `dist/`.
 
 If arguments were supplied, treat them as the target job (a posting, a company name, or a
-role description) and tailor accordingly. With no arguments, produce generic documents
-aimed at Staff, Principal, or Lead roles.
+role description) and tailor accordingly. With no arguments, produce a generic resume aimed
+at Staff, Principal, or Lead roles.
 
 ## Sources of truth
 
@@ -45,19 +49,16 @@ These come from `about-me.md` Section 8. Re-read it; this is a summary, not a re
   platform library and did not build or contribute to it.
 - **No AI tells.** No em dashes, no "not just X but Y", no leverage/robust/seamless/
   passionate/spearheaded/delve/elevate. Vary sentence and bullet length; uniform rhythm is
-  itself a tell. Spell out contractions in the cover letter.
+  itself a tell.
 - **Positioning.** Michael is targeting Staff, Principal, or Lead roles. Lead with level
   and technical direction, not with years served.
 
 ## Length and structure
 
-- **Resume:** roughly 1,650 to 1,750 words renders to 3 pages with the current LaTeX
-  header. Three pages is acceptable and expected, given a long career with many shorter
-  contracts.
-- **Cover letter:** one page, 620 to 680 words of body. Do not exceed one page.
-- Resume sections that work: Summary, Core Skills, Professional Experience (roughly ten
-  roles in detail), Earlier Experience (condensed, 2003-2016), Independent Projects and
-  Open Source.
+- Roughly 1,650 to 1,750 words renders to 3 pages with the current LaTeX header. Three
+  pages is acceptable and expected, given a long career with many shorter contracts.
+- Sections that work: Summary, Core Skills, Professional Experience (roughly ten roles in
+  detail), Earlier Experience (condensed, 2003-2016), Independent Projects and Open Source.
 
 ## Markdown conventions the build depends on
 
@@ -71,26 +72,23 @@ relies on those breaks.
 1. Read `about-me.md` (Section 8 especially) and the expanded resume.
 2. If a job was named, identify what it actually screens for and which of Michael's
    evidence maps to it. Say so briefly before writing.
-3. **Clear `dist/` first.** `dist/` holds only the current pair of documents, never a
-   history of them. Remove its contents before generating: `rm -f dist/*`. Previous
-   versions live in git, so nothing is lost. Create the directory if it does not exist.
-4. Write both markdown files into `dist/` using today's date from `date +%Y%m%d`:
-   - `dist/mryan-resume-YYYYMMDD.md`
-   - `dist/mryan-cover-YYYYMMDD.md`
-5. Build: `./build-docs.sh dist/mryan-resume-YYYYMMDD.md dist/mryan-cover-YYYYMMDD.md`
-6. Verify: page counts via `pdfinfo`, `0` non-ASCII in both markdown files, and render at
-   least one page to PNG with `pdftoppm` and actually look at it. Page count alone does not
-   catch broken paragraph flow.
+3. **Clear `dist/` first.** `dist/` holds only the current resume, never a history of
+   versions and never a cover letter. Remove its contents before generating:
+   `rm -f dist/*`. Previous versions live in git, so nothing is lost. Create the directory
+   if it does not exist.
+4. Write `dist/mryan-resume-YYYYMMDD.md`, using today's date from `date +%Y%m%d`.
+5. Build: `./build-docs.sh dist/mryan-resume-YYYYMMDD.md`
+6. Verify: page count via `pdfinfo`, `0` non-ASCII in the markdown, and render at least one
+   page to PNG with `pdftoppm` and actually look at it. Page count alone does not catch
+   broken paragraph flow.
 7. **Update `README.md`.** Replace everything between the `<!-- CURRENT:START -->` and
-   `<!-- CURRENT:END -->` markers with links to the files just generated, keeping the
+   `<!-- CURRENT:END -->` markers with links to the file just generated, keeping the
    existing shape:
 
    ```markdown
    **Resume** - [PDF](https://github.com/tracker1/resume/raw/master/dist/mryan-resume-YYYYMMDD.pdf) | [DOCX](https://github.com/tracker1/resume/raw/master/dist/mryan-resume-YYYYMMDD.docx) | [Markdown](dist/mryan-resume-YYYYMMDD.md)
 
-   **Cover letter** - [PDF](https://github.com/tracker1/resume/raw/master/dist/mryan-cover-YYYYMMDD.pdf) | [DOCX](https://github.com/tracker1/resume/raw/master/dist/mryan-cover-YYYYMMDD.docx) | [Markdown](dist/mryan-cover-YYYYMMDD.md)
-
-   *Generated YYYY-MM-DD. PDF and DOCX links download directly; Markdown renders on GitHub.*
+   _Generated YYYY-MM-DD. PDF and DOCX links download directly; Markdown renders on GitHub._
    ```
 
    **Use absolute `raw` URLs for the PDF and DOCX**, in the form
@@ -106,7 +104,7 @@ relies on those breaks.
    Leave the markers themselves in place; they are how the next run finds the block. Do not
    edit any other part of the README. Afterwards, confirm no link points at a file that is
    no longer in `dist/`.
-8. Report page counts, word counts, and any claim you could not source, so Michael can
+8. Report page count, word count, and any claim you could not source, so Michael can
    confirm or cut it.
 
 ## Tailoring, when a job is given
@@ -115,8 +113,8 @@ Keep every hard rule above. Then:
 
 - Reorder and reweight rather than inventing. The evidence is fixed; the emphasis is not.
 - Name the gap rather than hiding it. His recent contracts read C#/.NET heavy; if the role
-  is TypeScript-first, address that directly and point at the TypeScript work that exists.
-- Cover letter opening must be specific to the company. A letter that would work for any
-  employer is worse than no letter.
-- Do not restate the resume in the cover letter. The letter carries reasoning; the resume
-  carries record.
+  is TypeScript-first, lead with the TypeScript work that exists rather than burying it.
+- A tailored resume written here still replaces the one in `dist/`. If the tailoring is
+  specific enough that Michael will want the generic version back afterwards, say so, and
+  suggest `generate-target` with a `temp/<company>/job.txt` folder instead, which keeps
+  `dist/` generic and produces a matching cover letter.

@@ -40,7 +40,7 @@ Acting Principal Developer/Architect on a new Election Management Services platf
 
 - Back end: C# with .NET Core and FastEndpoints, using Dapper against Microsoft SQL Server.
 - Front end: React with Mantine UI for components and Zustand for state management.
-- Wrote the bulk of the build and automation tooling in TypeScript, run under Deno.
+- Wrote the bulk of the CI/CD build and automation tooling in TypeScript, run under Deno running as GitHub Actions.
 
 **Tools:**
 
@@ -55,6 +55,7 @@ Acting Principal Developer/Architect on a new Election Management Services platf
 - Zustand
 - TypeScript
 - Deno
+- GitHub Actions
 
 ---
 
@@ -265,7 +266,7 @@ Authentication adapters for role-based access control (RBAC).
 - .NET Core 3 (C# 8) with ASP.NET MVC, integrating various applications with Azure AD, Auth0, and Okta.
 
 **Vocem Online:**
-The first petition platform for online ballot endorsement used in the US. Built as a pilot application and proof of concept for the City of Boulder, Colorado.
+The first petition platform for online ballot endorsement used in the US. Built as a pilot application and proof of concept for the City of Boulder, Colorado. Architected both the front end and the back end.
 
 - Deployed the application and related services with Terraform on Azure Kubernetes Service managed with Rancher, with source control and CI/CD workflows under Azure DevOps.
 - Data: PostgreSQL as the primary database. Chosen as more portable, with relatively easy scaling options such as CockroachDB as an alternative deployment target, while not being too alien compared with Microsoft SQL Server, which most employees and developers in the organization already knew. Deployed on Azure hosting.
