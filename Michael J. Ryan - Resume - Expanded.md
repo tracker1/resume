@@ -32,7 +32,7 @@ Full-stack software developer and architect with close to 30 years of experience
 
 #### Intersect Group (City of Phoenix)
 
-Apr 2025 - Present
+Apr 2025 - Sept 2026
 Phoenix, AZ (Remote, Contract)
 
 **Election Management Software:**
