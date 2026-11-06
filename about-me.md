@@ -284,7 +284,7 @@ one that does not.
 
 Specifics, as of September 2026:
 
-- Claude Opus models since 4.5 are his default. Fable's results he rates very highly, but
+- Claude Code's Opus models since 4.5 are his default. Fable's results he rates very highly, but
   Opus performs nearly as well at code generation and intent-following without taking as
   long, so it gets most of the use.
 - GitHub Copilot's default agent is his clearest negative example: poor at understanding
