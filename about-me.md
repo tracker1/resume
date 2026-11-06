@@ -218,12 +218,46 @@ classic FTN networking). Has historically operated multi-network gated message a
 This is a niche domain, but it demonstrates a career-long habit of understanding
 protocols and formats at the byte level.
 
+**Software security:** Deep understanding of security principles as they apply to
+software systems and applications. The professional record behind it: designed and was
+principal developer on the Runbeck auth/RBAC service, with defaults that meet or exceed
+NIST guidelines and an optional encryption layer for SQLite at rest; authentication
+adapters for Azure AD, Auth0, and Okta; JWT in most professional work since 2013,
+including an early JWT library for Node.js; Identity Server at ServiceTitan; access
+request and approval tooling at Wells Fargo. Session invalidation designed end to end
+(section 2) is the same instinct in personal work. The evidence is application security
+and identity. If a posting asks for security operations, penetration testing, or
+compliance auditing, that is a question for Michael, not a claim to make.
+
+**eLearning:** Deep understanding of eLearning systems and standards, built across three
+stints at Inxsol: a SCORM-compatible LMS interface extended for offline delivery and an
+AICC LMS extension (2003-2005), a web-based incident command training simulator (2011),
+and LMS integration and courseware development with SCORM and Tin Can (xAPI) for a first
+responder training application (2015). Also worked on the online student portal at
+Apollo Group (University of Phoenix, 2008).
+
+**API design and integration:** Both sides of the contract, across most of his career.
+Design: the ServiceTitan Application Platform API for external integrators (design lead
+and principal developer, including long-lived compatibility obligations); REST,
+WebSocket, and GraphQL (Apollo) APIs; WCF services exposing both SOAP and JSON
+endpoints; NSwag-generated API documentation and typed client libraries at HCA; APIs
+exposed to internal systems at Consumer Cellular. Usage and integration: carrier
+integrations at Consumer Cellular, identity providers (Azure AD, Auth0, Okta), SendGrid,
+and a bulk processor driving the Emailage API at high volume. The contract-first habit
+in section 2 is the through-line.
+
 ---
 
 ## 5. Working Style with AI-Assisted Development
 
-Michael has a considered, experience-grounded position on AI-augmented development
-rather than either hype or dismissal:
+Since 2025 Michael has used AI coding agents extensively across several personal
+projects. This is substantial hands-on experience, not a passing trial: he is practiced
+at defining deep, complex tasks for agents and carrying them through to working results.
+It is personal-project experience, not professional or production use, and generated
+documents should name it that way (see section 8, Voice).
+
+He has a considered, experience-grounded position on AI-augmented development rather
+than either hype or dismissal:
 
 - Treats AI coding agents as throughput multipliers gated by human review capacity. His
   "gatekeeper model" argues that human review throughput should be the cost bound on
@@ -406,7 +440,7 @@ cover letters, messages.
   ahead of the substance. Keep it to a few words and get to the point. In generated text
   follow it with a plain hyphen or comma, since the ASCII rule still applies.
 - **Precise about where experience comes from.** He changed "AI tools are part of how I
-  work" to say they are part of how he works *on his personal projects*. Do not let a
+  work" to say they are part of how he works _on his personal projects_. Do not let a
   general statement imply professional use, scope, or ownership he has not had; name the
   context instead.
 - **States what he wants from an employer.** He added "open to workplaces that allow

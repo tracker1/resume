@@ -93,9 +93,3 @@ Steps:
 For each application processed: the folder, page counts for both documents, and any claim
 you could not source from `about-me.md` or the expanded resume, so Michael can confirm or
 cut it before sending. Then list any folders skipped and why.
-
-## Note
-
-`temp/` is gitignored, so anything generated there is not under version control and is not
-recoverable if deleted. Mention this once if Michael seems to be treating a folder there as
-durable storage.
